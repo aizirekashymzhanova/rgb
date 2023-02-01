@@ -1,0 +1,32 @@
+.news__container {
+  min-height: 50vh;
+  width: 70%;
+  margin: 10vh auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.news__title {
+  color: #574339;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.progress__container {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .news__container {
+    width: 95%;
+  }
+  .news__title {
+    font-size: 19px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,239 @@
+.our-jobs {
+  width: 100%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin-bottom: 10px;
+}
+
+.our-jobs__container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-jobs__container__title {
+  font-weight: 700;
+  font-size: 16px;
+  color: orange;
+  padding-bottom: 10px;
+  border-bottom: #003366 2px solid;
+}
+
+.our-jobs__container__desciption {
+  font-weight: 500;
+  font-size: 17px;
+  color: #bb9e8d;
+  width: 70%;
+  text-align: center;
+}
+
+.our-jobs__cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.our-jobs__card {
+  width: 300px;
+  height: 31vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-size: 60%;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  transition: 300ms;
+  margin: 10px 10px;
+}
+
+.our-jobs__card:hover {
+  transform: scale(1.03);
+}
+
+.our-jobs__card:hover .our-jobs__card__hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.4));
+}
+
+.our-jobs__card:hover .our-jobs__card__more-btn,
+.our-jobs__card:hover .our-jobs__card__store-btn {
+  opacity: 1;
+}
+
+.our-jobs__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.13));
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.our-jobs__card > * {
+  z-index: 10;
+}
+
+.our-jobs__card__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: 500ms;
+}
+
+.our-jobs__card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.our-jobs__card__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+  color: #003366;
+}
+
+.our-jobs__card__description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #003366;
+  text-align: center;
+}
+
+.our-jobs__card__more-btn {
+  width: 80%;
+  height: 40px;
+  background-color: #003366;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 200ms;
+  margin-bottom: 10px;
+  opacity: 0;
+}
+
+.our-jobs__card__store-btn {
+  width: 80%;
+  height: 40px;
+  background-color: #003366;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  cursor: pointer;
+  transition: 300ms;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.our-jobs__card__store-btn:hover,
+.our-jobs__card__more-btn:hover {
+  background-color: #3b638a;
+}
+
+.store-btn__icon {
+  margin-right: 5px;
+  height: 70%;
+}
+.store-btn__icon img {
+  height: 95%;
+}
+
+.store-btn__text {
+  display: flex;
+  flex-direction: column;
+}
+.store-btn__text span:first-child {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.store-btn__text span:last-child {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* .our-jobs__card__more-btn:hover {
+  background-color: #3b638a;
+} */
+/* .our-tasks__section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+} */
+
+/* .our-task__block {
+  text-align: center;
+  width: 30%;
+  margin-top: 5vh;
+  line-height: 1.5;
+  font-weight: normal;
+} */
+
+.our-jobs__more-btn {
+  cursor: pointer;
+  font-weight: normal;
+  margin: 5vh;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #003366;
+  border: 2px #003366 solid;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.our-jobs__more-btn:hover {
+  color: #4c6783;
+  border-color: #4c6783;
+}
+
+@media only screen and (max-width: 600px) {
+  .our-tasks__section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .our-task__block {
+    width: 90%;
+  }
+
+  .our-jobs__container__desciption {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .our-jobs__container {
+    width: 100%;
+  }
+  .our-jobs__card {
+    width: 95%;
+  }
+}

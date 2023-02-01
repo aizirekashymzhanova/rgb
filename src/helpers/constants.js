@@ -1,0 +1,17 @@
+export const AUTH_API = 'https://technoland-pf.kg/api/login.php';
+export const CHECK_AUTH_API = 'https://technoland-pf.kg/api/user-info.php';
+export const ADMIN_AUTH_API = 'https://technoland-pf.kg/api/admin/login-admin.php';
+export const CHECK_ADMIN_AUTH_API = 'https://technoland-pf.kg/api/admin/admin-info.php';
+export const ADD_EVENT_API = 'https://technoland-pf.kg/api/admin/add-event.php';
+export const GET_NEWS_API = 'https://technoland-pf.kg/api/get-news.php';
+export const GET_NEWS_DETAILS_API = 'https://technoland-pf.kg/api/get-news-details.php';
+export const UPDATE_EVENT_API = 'https://technoland-pf.kg/api/admin/edit-news.php';
+export const DELETE_EVENT_API = 'https://technoland-pf.kg/api/admin/delete-news.php';
+export const ADD_MATERIAL_API = 'https://technoland-pf.kg/api/admin/upload-file.php';
+export const GET_MATERIALS_API = 'https://technoland-pf.kg/api/get-materials.php';
+export const SEND_MAIL_API = 'https://technoland-pf.kg/api/send-mail.php';
+export const GET_USERS_API = 'https://technoland-pf.kg/api/admin/get-users.php';
+export const REGISTER_NEW_USER = 'https://technoland-pf.kg/api/admin/register-new-user.php';
+export const DELETE_USER_API = 'https://technoland-pf.kg/api/admin/delete-user.php';
+export const RESET_PASSWORD_API = 'https://technoland-pf.kg/api/admin/reset-password.php';
+export const DELETE_MATERIAL_API = 'https://technoland-pf.kg/api/admin/delete-material.php';

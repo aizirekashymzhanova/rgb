@@ -1,0 +1,271 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+  width: 100%;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+.video {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(110deg, #003366 60%, orange 60%);
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #f1f1f1;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.subcontent__navbar {
+  margin: auto;
+  margin-top: 10px;
+  width: 60%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subcontent__navbar__logo {
+  height: 100%;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.subcontent__navbar__logo .navbar__logo {
+  height: 60%;
+  margin-right: 10px;
+}
+
+.navbar__logo__title {
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.subcontent__navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subcontent__navbar ul li {
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.subcontent__navbar ul a {
+  cursor: pointer;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+
+.sign-in-btn {
+  outline: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.sign-in-btn span {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.subcontent {
+  width: 60%;
+  height: 90%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subcontent__text-block {
+  width: 60%;
+  height: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subcontent__login-block {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subcontent__login-form {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  color: black;
+}
+
+.subcontent__login-form__title {
+  margin-top: 0;
+  width: 100%;
+  height: 12%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.subcontent__login-form__error {
+  width: 90%;
+  color: red;
+  text-align: center;
+  font-size: 16px;
+}
+
+.subcontent__login-form__description {
+  width: 85%;
+  text-align: center;
+  color: #7c6f6f;
+}
+
+.subcontent__password-block,
+.subcontent__email-block {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subcontent__checkbox-block {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.subcontent__email-block label,
+.subcontent__password-block {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 5px 0;
+  color: #7c6f6f;
+}
+
+.subcontent__login-inp,
+.subcontent__password-inp {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  outline: none;
+  border: 1px #7c6f6f solid;
+  border-radius: 5px;
+  color: #7c6f6f;
+  background-color: white;
+}
+
+.subcontent__login-inp[type="text"],
+.subcontent__password-inp[type="password"],
+.subcontent__password-inp[type="text"] {
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.subcontent__login-inp,
+.subcontent__password-inp {
+  font-size: 16px;
+  color: gray;
+}
+
+.subcontent__login-form__button {
+  margin-bottom: 10px;
+  width: 90%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: 300ms;
+}
+
+.subcontent__login-form__button:hover {
+  background-color: rgb(226, 159, 35);
+  color: white;
+}
+
+.subcontent__title {
+  font-size: 40px;
+  font-family: Georgia, Times, "Times New Roman";
+}
+
+.subcontent__description {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Burger menu */
+.subcontent__navbar .icon {
+  display: none;
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .subcontent__navbar ul,
+  .navbar__log-in-out-btn {
+    display: none;
+  }
+  .subcontent__navbar {
+    width: 95%;
+  }
+  .subcontent {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .subcontent__title {
+    font-size: 25px;
+  }
+
+  .subcontent__description {
+    font-size: 17px;
+  }
+
+  .subcontent {
+    width: 100%;
+  }
+
+  .subcontent__text-block {
+    width: 95%;
+  }
+}
