@@ -12,8 +12,7 @@ assets/
 # testing
 /coverage
 
-# production
-/build
+# productions
 
 # misc
 .DS_Store
