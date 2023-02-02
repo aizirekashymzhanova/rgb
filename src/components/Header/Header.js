@@ -80,8 +80,8 @@ const Header = () => {
               <Link to="/about">О НАС</Link>
             </li>
             {/* <li>
-                            <Link to="/news">НОВОСТИ</Link>
-                        </li> */}
+              <Link to="/news">НОВОСТИ</Link>
+            </li> */}
             <li>
               <Link to="/contacts">КОНТАКТЫ</Link>
             </li>
