@@ -63,7 +63,7 @@ const Home = () => {
                 Язык жестов: Арифметика
               </span>
               <span className="our-jobs__card__description">
-                Обучающее приложение по арифметике
+                Обучающее мобильное приложение по арифметике
               </span>
               <div className="our-jobs__card__hover">
                 <a
@@ -105,7 +105,7 @@ const Home = () => {
                 Язык жестов: Мой мир
               </span>
               <span className="our-jobs__card__description">
-                Обучающее приложение для слабослышащих детей.
+                Обучающее мобильное приложение для слабослышащих детей.
               </span>
               <div className="our-jobs__card__hover">
                 <a
@@ -146,7 +146,7 @@ const Home = () => {
                 Язык жестов: Моя семья
               </span>
               <span className="our-jobs__card__description">
-                Обучающее приложение для слабослышащих детей.
+                Обучающее мобильное приложение для слабослышащих детей.
               </span>
               <div className="our-jobs__card__hover">
                 <a
@@ -185,7 +185,7 @@ const Home = () => {
             >
               <span className="our-jobs__card__title">Дилгирим</span>
               <span className="our-jobs__card__description">
-                Двуязычное приложение для детей с нарушением слуха.
+                Двуязычное мобильное приложение для детей с нарушением слуха.
               </span>
               <div className="our-jobs__card__hover">
                 <a
@@ -267,7 +267,7 @@ const Home = () => {
       </div>
       {/* <NewsCard /> */}
       <News />
-      <Activities />
+      {/* <Activities /> */}
     </>
   );
 };

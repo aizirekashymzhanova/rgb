@@ -164,6 +164,9 @@ const Header = () => {
                 >
                   Войти
                 </button>
+                <div className="btn_registr">
+                  <a href="/register_user">Зарегистрироваться</a>
+                </div>
               </form>
             </div>
           ) : (

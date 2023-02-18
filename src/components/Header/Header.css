@@ -204,8 +204,13 @@
   color: gray;
 }
 
-.subcontent__login-form__button {
+.btn_registr {
+  align-items: start;
   margin-bottom: 10px;
+}
+
+.subcontent__login-form__button {
+  margin-bottom: 5px;
   width: 90%;
   padding-top: 2vh;
   padding-bottom: 2vh;
