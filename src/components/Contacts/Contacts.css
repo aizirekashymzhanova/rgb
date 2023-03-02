@@ -129,6 +129,19 @@
 }
 
 @media screen and (max-width: 500px) {
+  .partner__info__logo_user {
+    height: 15vh;
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 310px) {
+  .partner__info__logo_user {
+    height: 15vh;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .contact__title {
     text-align: center;
   }

@@ -21,7 +21,8 @@
 
 .partner__info-undp,
 .partner__info-unicef,
-.partner__info-sifo {
+.partner__info-sifo, 
+.partner__info-sdo {
   width: 100%;
   min-height: 40vh;
   display: flex;
@@ -32,6 +33,11 @@
 }
 
 .partner__info-undp {
+  color: white;
+  background-color: #1a64b7;
+}
+
+.partner__info-sdo {
   color: white;
   background-color: #1a64b7;
 }
@@ -49,6 +55,12 @@
 .partner__info__logo {
   height: 10vh;
 }
+.partner__info__logo_user {
+  height: 25vh;
+  width: 30vw;
+  margin-top: 10px;
+}
+
 
 .partner__info__title {
   font-weight: 700;
@@ -67,6 +79,11 @@
   margin-top: 2vh;
 }
 
+.url_sdo{
+  color: white;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 800px) {
   .partners__title {
     font-size: 17px;
@@ -80,5 +97,12 @@
 @media screen and (max-width: 550px) {
   .partners__container {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .partner__info__logo_user {
+    height: 15vh;
+    width: 45vw;
   }
 }

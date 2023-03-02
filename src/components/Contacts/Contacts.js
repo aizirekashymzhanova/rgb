@@ -6,6 +6,7 @@ import { SEND_MAIL_API } from '../../helpers/constants';
 import CallIcon from '@material-ui/icons/Call';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import axios from 'axios';
+import siUseLg from '../../assets/images/rena.jpg';
 
 const Contacts = () => {
     const [sendMessageFormData, setsendMessageFormData] = useState({ name: '', email: '', message: '' });
@@ -64,6 +65,7 @@ const Contacts = () => {
                 <span className="contact__info"><AlternateEmailIcon />technolandpf@gmail.com</span>
 
                 <span className="contact__title">Председатель общественного фонда</span>
+                <img className="partner__info__logo_user" src={siUseLg} alt="" />
                 <span className="contact__info">Султангазиева Р.Т.</span>
                 <span className="contact__info"><CallIcon /> +996 772 322 652</span>
                 <span className="contact__info"><AlternateEmailIcon /> renasultangazieva@gmail.com</span>
