@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a511a879.css",
-    "main.js": "/static/js/main.30983fc5.js",
+    "main.css": "/static/css/main.dd0552ff.css",
+    "main.js": "/static/js/main.531c7f61.js",
     "static/media/deaf.mp4": "/static/media/deaf.54e1e781e827e5d6d9ea.mp4",
     "static/media/videokrena.mp4": "/static/media/videokrena.4e18f4a2bdb97c2849a9.mp4",
     "static/media/gif1tetr.gif": "/static/media/gif1tetr.8d185f74eafdf49d2360.gif",
@@ -31,12 +31,15 @@
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
     "static/media/photokrena2.jpeg": "/static/media/photokrena2.5754129ad40a47477cd8.jpeg",
     "static/media/photokrena4.jpeg": "/static/media/photokrena4.b7b91c6ef098d8fb1487.jpeg",
+    "static/media/foto_u.jpg": "/static/media/foto_u.39e1a65dfd98c3ee37fd.jpg",
     "static/media/photokrena1.jpeg": "/static/media/photokrena1.06cc03f1c07863a325d0.jpeg",
     "static/media/isee_p.jpg": "/static/media/isee_p.5cd1947188d7e604d061.jpg",
+    "static/media/rena.jpg": "/static/media/rena.c482e69bc33630b7f8df.jpg",
     "static/media/caren_19.png": "/static/media/caren_19.941a4d8556c02f2b6550.png",
     "static/media/sadik1-300x226.png": "/static/media/sadik1-300x226.9a02b780bee4a9b48e3a.png",
     "static/media/photokrena3.jpeg": "/static/media/photokrena3.ac073945430ad17bd73e.jpeg",
     "static/media/Screenshot_1-300x224.png": "/static/media/Screenshot_1-300x224.0110cf79b2a4a120308e.png",
+    "static/media/sdo.jpg": "/static/media/sdo.55f83a90b66cd7b2397e.jpg",
     "static/media/isee5-1.jpg": "/static/media/isee5-1.4ae3502123232223896a.jpg",
     "static/media/unicef.png": "/static/media/unicef.2f483c087f01f08e82fe.png",
     "static/media/technoland-logo.png": "/static/media/technoland-logo.e1b715e09378458492e8.png",
@@ -47,11 +50,11 @@
     "static/media/titul_buk_1-198x300.jpeg": "/static/media/titul_buk_1-198x300.648638039367895ffd04.jpeg",
     "static/media/azbuka1-1.jpg": "/static/media/azbuka1-1.9a98774b100ae6eb1e2d.jpg",
     "index.html": "/index.html",
-    "main.a511a879.css.map": "/static/css/main.a511a879.css.map",
-    "main.30983fc5.js.map": "/static/js/main.30983fc5.js.map"
+    "main.dd0552ff.css.map": "/static/css/main.dd0552ff.css.map",
+    "main.531c7f61.js.map": "/static/js/main.531c7f61.js.map"
   },
   "entrypoints": [
-    "static/css/main.a511a879.css",
-    "static/js/main.30983fc5.js"
+    "static/css/main.dd0552ff.css",
+    "static/js/main.531c7f61.js"
   ]
 }
