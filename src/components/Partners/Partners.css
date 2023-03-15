@@ -38,8 +38,8 @@
 }
 
 .partner__info-sdo {
-  color: white;
-  background-color: #1a64b7;
+  /* color: white;
+  background-color: #1a64b7; */
 }
 
 .partner__info-unicef {
@@ -53,21 +53,29 @@
 }
 
 .partner__info__logo {
-  height: 10vh;
+  /* height: 10vh; */
+  width: 11vw;
 }
 .partner__info__logo_user {
-  height: 25vh;
-  width: 30vw;
-  margin-top: 10px;
+  /* height: 25vh; */
+  width: 45vw;
+  margin-top: 20px;
 }
 
 
 .partner__info__title {
   font-weight: 700;
   font-size: 25px;
-  width: 60%;
+  width: 80%;
   text-align: center;
-  margin-top: 4vh;
+  margin-top: 2vh;
+}
+
+.logo_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .partner__info__description {
@@ -96,13 +104,12 @@
 
 @media screen and (max-width: 550px) {
   .partners__container {
-    width: 95%;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 880px) {
   .partner__info__logo_user {
-    height: 15vh;
-    width: 45vw;
+    width: 70vw;
   }
 }

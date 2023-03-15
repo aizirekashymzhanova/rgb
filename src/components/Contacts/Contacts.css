@@ -128,18 +128,18 @@
   background-color: rgb(226, 159, 35);
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .partner__info__logo_user {
     height: 15vh;
-    width: 50vw;
+    width: 45%;
   }
 }
 @media screen and (max-width: 310px) {
   .partner__info__logo_user {
     height: 15vh;
-    width: 80vw;
+    width: 80%;
   }
-}
+} */
 
 @media screen and (max-width: 500px) {
   .contact__title {
