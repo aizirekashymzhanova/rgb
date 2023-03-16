@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd0552ff.css",
-    "main.js": "/static/js/main.531c7f61.js",
+    "main.css": "/static/css/main.c8364d94.css",
+    "main.js": "/static/js/main.c0c4f779.js",
     "static/media/deaf.mp4": "/static/media/deaf.54e1e781e827e5d6d9ea.mp4",
     "static/media/videokrena.mp4": "/static/media/videokrena.4e18f4a2bdb97c2849a9.mp4",
     "static/media/gif1tetr.gif": "/static/media/gif1tetr.8d185f74eafdf49d2360.gif",
@@ -28,12 +28,19 @@
     "static/media/elearning.png": "/static/media/elearning.3ab1959ba13dac31ba2a.png",
     "static/media/ris.jpeg": "/static/media/ris.9395881078118cc4b111.jpeg",
     "static/media/hed.png": "/static/media/hed.33108f717dc8800db6bc.png",
+    "static/media/balalyk.jpg": "/static/media/balalyk.316b42997c7f8ba1cae6.jpg",
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
+    "static/media/karasuu.jpg": "/static/media/karasuu.acb5b6f1630ca773b665.jpg",
     "static/media/photokrena2.jpeg": "/static/media/photokrena2.5754129ad40a47477cd8.jpeg",
     "static/media/photokrena4.jpeg": "/static/media/photokrena4.b7b91c6ef098d8fb1487.jpeg",
+    "static/media/sifo.jpg": "/static/media/sifo.d937e3246005bf5ca4db.jpg",
     "static/media/foto_u.jpg": "/static/media/foto_u.39e1a65dfd98c3ee37fd.jpg",
+    "static/media/fablab.jpg": "/static/media/fablab.bb358391655636ec2d9b.jpg",
+    "static/media/logo_shcool.png": "/static/media/logo_shcool.7a27b82a84820490baff.png",
     "static/media/photokrena1.jpeg": "/static/media/photokrena1.06cc03f1c07863a325d0.jpeg",
     "static/media/isee_p.jpg": "/static/media/isee_p.5cd1947188d7e604d061.jpg",
+    "static/media/internat.jpg": "/static/media/internat.19c08c8b9f6f6e711547.jpg",
+    "static/media/new_phote.jpg": "/static/media/new_phote.9a52b553778ca28f9536.jpg",
     "static/media/rena.jpg": "/static/media/rena.c482e69bc33630b7f8df.jpg",
     "static/media/caren_19.png": "/static/media/caren_19.941a4d8556c02f2b6550.png",
     "static/media/sadik1-300x226.png": "/static/media/sadik1-300x226.9a02b780bee4a9b48e3a.png",
@@ -50,11 +57,11 @@
     "static/media/titul_buk_1-198x300.jpeg": "/static/media/titul_buk_1-198x300.648638039367895ffd04.jpeg",
     "static/media/azbuka1-1.jpg": "/static/media/azbuka1-1.9a98774b100ae6eb1e2d.jpg",
     "index.html": "/index.html",
-    "main.dd0552ff.css.map": "/static/css/main.dd0552ff.css.map",
-    "main.531c7f61.js.map": "/static/js/main.531c7f61.js.map"
+    "main.c8364d94.css.map": "/static/css/main.c8364d94.css.map",
+    "main.c0c4f779.js.map": "/static/js/main.c0c4f779.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd0552ff.css",
-    "static/js/main.531c7f61.js"
+    "static/css/main.c8364d94.css",
+    "static/js/main.c0c4f779.js"
   ]
 }
