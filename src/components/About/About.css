@@ -27,6 +27,25 @@
   text-align: justify; /* Выравнивание по ширине */
 }
 
+.info__logo_user{
+  width: 16vw;
+}
+
+.podrobnee{
+  text-decoration: underline;
+}
+
+
+.user_info{
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 550px) {
+  .info__logo_user {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .about-us__title {
     font-size: 18px;

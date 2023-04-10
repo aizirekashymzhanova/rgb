@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 //дактильная михаил добавил
 import dakt from "../../assets/images/dakt.jpeg";
 import ris from "../../assets/images/ris.jpeg";
+import ris2 from "../../assets/images/tmrs.png";
 import News from "../News/News";
 //
 
@@ -245,6 +246,21 @@ const Home = () => {
                     <span>Перейти</span>
                   </div>
                 </Link>
+              </div>
+            </div>
+
+            <div
+              className="our-jobs__card"
+              style={{ backgroundImage: `url(${ris2})` }}
+            >
+              <span className="our-jobs__card__title">Видеоуроки по Кыргызскому языку</span>
+              <span className="our-jobs__card__description"></span>
+              <div className="our-jobs__card__hover">
+                <div className="our-jobs__card__store-btn">
+                  <div>
+                    <a href="https://www.youtube.com/watch?v=ZGsDYsFAmDg" className="pereiti">Перейти</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

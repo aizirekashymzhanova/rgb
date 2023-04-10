@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     },
   },
   media: {
-    height: "40vh",
+    height: "35vh",
     ["@media (max-width:800px)"]: {
       // eslint-disable-line no-useless-computed-key
       width: "100%",

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8364d94.css",
-    "main.js": "/static/js/main.c0c4f779.js",
+    "main.css": "/static/css/main.752ca4d1.css",
+    "main.js": "/static/js/main.158a5b9c.js",
     "static/media/deaf.mp4": "/static/media/deaf.54e1e781e827e5d6d9ea.mp4",
     "static/media/videokrena.mp4": "/static/media/videokrena.4e18f4a2bdb97c2849a9.mp4",
     "static/media/gif1tetr.gif": "/static/media/gif1tetr.8d185f74eafdf49d2360.gif",
@@ -13,6 +13,7 @@
     "static/media/web_PD.gif": "/static/media/web_PD.25115ca6674528963197.gif",
     "static/media/girl1.gif": "/static/media/girl1.b5e5dcc68d07f6be301d.gif",
     "static/media/gifdakt.gif": "/static/media/gifdakt.1d958b4cf6bfe357ef09.gif",
+    "static/media/tmrs.png": "/static/media/tmrs.c3bdb5ab6c2314d20f6a.png",
     "static/media/girl2.gif": "/static/media/girl2.6f30bc54c9ab7d9da049.gif",
     "static/media/sign-lang-ar.png": "/static/media/sign-lang-ar.c3fcf38f206aa5cb6e5f.png",
     "static/media/appstore.png": "/static/media/appstore.f25e504c10b6b22cda21.png",
@@ -23,6 +24,7 @@
     "static/media/sign-lang-fam.png": "/static/media/sign-lang-fam.75b2fb18308e85dceaee.png",
     "static/media/nazira3.png": "/static/media/nazira3.71cac2d395de68da68d3.png",
     "static/media/dakt.jpeg": "/static/media/dakt.47d3052e78cf20279e51.jpeg",
+    "static/media/karasuu.jpg": "/static/media/karasuu.ad825cff4f8401c8155c.jpg",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/privet-1.gif": "/static/media/privet-1.c6e7a04def1cbf062893.gif",
     "static/media/elearning.png": "/static/media/elearning.3ab1959ba13dac31ba2a.png",
@@ -30,11 +32,11 @@
     "static/media/hed.png": "/static/media/hed.33108f717dc8800db6bc.png",
     "static/media/balalyk.jpg": "/static/media/balalyk.316b42997c7f8ba1cae6.jpg",
     "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.03523cf578d69fa92322.ttf",
-    "static/media/karasuu.jpg": "/static/media/karasuu.acb5b6f1630ca773b665.jpg",
     "static/media/photokrena2.jpeg": "/static/media/photokrena2.5754129ad40a47477cd8.jpeg",
     "static/media/photokrena4.jpeg": "/static/media/photokrena4.b7b91c6ef098d8fb1487.jpeg",
     "static/media/sifo.jpg": "/static/media/sifo.d937e3246005bf5ca4db.jpg",
     "static/media/foto_u.jpg": "/static/media/foto_u.39e1a65dfd98c3ee37fd.jpg",
+    "static/media/aa.jpg": "/static/media/aa.eac63bdda5b3f4078384.jpg",
     "static/media/fablab.jpg": "/static/media/fablab.bb358391655636ec2d9b.jpg",
     "static/media/logo_shcool.png": "/static/media/logo_shcool.7a27b82a84820490baff.png",
     "static/media/photokrena1.jpeg": "/static/media/photokrena1.06cc03f1c07863a325d0.jpeg",
@@ -44,8 +46,10 @@
     "static/media/rena.jpg": "/static/media/rena.c482e69bc33630b7f8df.jpg",
     "static/media/caren_19.png": "/static/media/caren_19.941a4d8556c02f2b6550.png",
     "static/media/sadik1-300x226.png": "/static/media/sadik1-300x226.9a02b780bee4a9b48e3a.png",
+    "static/media/bb.jpg": "/static/media/bb.675b1c177f822e6f15b2.jpg",
     "static/media/photokrena3.jpeg": "/static/media/photokrena3.ac073945430ad17bd73e.jpeg",
     "static/media/Screenshot_1-300x224.png": "/static/media/Screenshot_1-300x224.0110cf79b2a4a120308e.png",
+    "static/media/about.jpg": "/static/media/about.b2a35a3ec2dfa56f209d.jpg",
     "static/media/sdo.jpg": "/static/media/sdo.55f83a90b66cd7b2397e.jpg",
     "static/media/isee5-1.jpg": "/static/media/isee5-1.4ae3502123232223896a.jpg",
     "static/media/unicef.png": "/static/media/unicef.2f483c087f01f08e82fe.png",
@@ -57,11 +61,11 @@
     "static/media/titul_buk_1-198x300.jpeg": "/static/media/titul_buk_1-198x300.648638039367895ffd04.jpeg",
     "static/media/azbuka1-1.jpg": "/static/media/azbuka1-1.9a98774b100ae6eb1e2d.jpg",
     "index.html": "/index.html",
-    "main.c8364d94.css.map": "/static/css/main.c8364d94.css.map",
-    "main.c0c4f779.js.map": "/static/js/main.c0c4f779.js.map"
+    "main.752ca4d1.css.map": "/static/css/main.752ca4d1.css.map",
+    "main.158a5b9c.js.map": "/static/js/main.158a5b9c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8364d94.css",
-    "static/js/main.c0c4f779.js"
+    "static/css/main.752ca4d1.css",
+    "static/js/main.158a5b9c.js"
   ]
 }
