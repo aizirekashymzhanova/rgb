@@ -7,6 +7,8 @@ import CallIcon from '@material-ui/icons/Call';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import axios from 'axios';
 import siUseLg from '../../assets/images/rena.jpg';
+import aa from '../../assets/images/aa.jpg';
+import bb from '../../assets/images/bb.jpg';
 
 const Contacts = () => {
     const [sendMessageFormData, setsendMessageFormData] = useState({ name: '', email: '', message: '' });
@@ -65,15 +67,21 @@ const Contacts = () => {
                 <span className="contact__info"><AlternateEmailIcon />technolandpf@gmail.com</span>
 
                 <span className="contact__title">Председатель общественного фонда</span>
-                <img className="partner__info__logo_user" src={siUseLg} alt="" />
+                {/* <img className="partner__info__logo_user1" src={siUseLg} alt="" /> */}
                 <span className="contact__info">Султангазиева Р.Т.</span>
                 <span className="contact__info"><CallIcon /> +996 772 322 652</span>
                 <span className="contact__info"><AlternateEmailIcon /> renasultangazieva@gmail.com</span>
 
-                <span className="contact__title">Координатор</span>
+                <span className="contact__title">Координатор фонда</span>
+                {/* <img className="partner__info__logo_user1" src={aa} alt="" /> */}
                 <span className="contact__info">Турдалиева А.А.</span>
                 <span className="contact__info"><CallIcon /> +996 778 810 250</span>
-                <span className="contact__info"><AlternateEmailIcon /> aizada7878@mail.ru</span>
+                <span className="contact__info"><AlternateEmailIcon /> aizada.amanbekovna@krena.kg</span>
+
+                <span className="contact__title">Наблюдательный совет</span>
+                {/* <img className="partner__info__logo_user1" src={bb} alt="" /> */}
+                <span className="contact__info">Медралиева Б.Н.</span>
+                <span className="contact__info"><AlternateEmailIcon /> medralieva@mail.ru</span>
 
 
                 <form onSubmit={sendsendMessageFormData} className="contacts__form">

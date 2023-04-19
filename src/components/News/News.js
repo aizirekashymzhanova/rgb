@@ -47,7 +47,10 @@ const News = () => {
         <span className="news__title">НОВОСТИ</span>
         {news ? (
           <>
-            {news.news.map((elem) => (
+     
+           {news.news
+            .sort((a, b) => (b.news_id) - (a.news_id))
+            .map((elem) => (
               <NewsCard
                 key={elem.news_id}
                 image={elem.bgImage}
@@ -56,13 +59,13 @@ const News = () => {
                 description={elem.description.slice(0, 300) + "..."}
                 date={elem.date}
               />
-            ))}
-            <Pagination
+            ))} 
+           <Pagination
               className={classes.pagination}
               page={+page}
               onChange={handlePage}
               count={totalPages}
-            />
+            /> 
           </>
         ) : (
           <div className="progress__container">

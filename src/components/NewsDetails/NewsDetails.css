@@ -8,14 +8,15 @@
 }
 
 .news-details__title {
-  margin-top: 5vh;
+  margin-top: 1vh;
   color: #574339;
   font-weight: 500;
   font-size: 24px;
 }
 
 .news-details__date {
-  margin-top: 2vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   color: #7c6f6f;
   font-weight: 300;
   display: flex;
@@ -27,16 +28,32 @@
   max-height: 70vh;
 }
 
+.news_detail_foto{
+  width: 40vw;
+}
+
 .news-details__description {
   width: 100%;
   white-space: pre-wrap;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  margin-top: 5vh;
+  margin-bottom: 1vh;
   width: 100%;
   color: #574339;
   font-weight: 300;
   line-height: 1.5;
   text-indent: 1.5em; /* Отступ первой строки */
   text-align: justify; /* Выравнивание по ширине */
+}
+
+@media screen and (max-width: 550px) {
+  .news_detail_foto {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .news_detail_foto {
+    width: 70vw;
+  }
 }

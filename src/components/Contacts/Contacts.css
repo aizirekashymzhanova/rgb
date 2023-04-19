@@ -123,23 +123,24 @@
   margin: 10px auto;
   transition: 200ms;
 }
+.partner__info__logo_user1{
+  width: 25vw;
+}
 
 .form__submit-btn:hover {
   background-color: rgb(226, 159, 35);
 }
 
-/* @media screen and (max-width: 500px) {
-  .partner__info__logo_user {
-    height: 15vh;
-    width: 45%;
+@media screen and (max-width: 500px) {
+  .partner__info__logo_user1 {
+    width: 60%;
   }
 }
 @media screen and (max-width: 310px) {
-  .partner__info__logo_user {
-    height: 15vh;
+  .partner__info__logo_user1 {
     width: 80%;
   }
-} */
+}
 
 @media screen and (max-width: 500px) {
   .contact__title {

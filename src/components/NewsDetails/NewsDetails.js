@@ -37,24 +37,28 @@ const NewsDetails = (props) => {
                 {
                     newsDetails ? (
                         <>
-                            <span className="news-details__title">{newsDetails.title}</span>
                             <span className="news-details__date"><AccessTimeIcon style={{ fontSize: 30, color: 'orange', marginRight: '2px' }} /> {newsDetails.date}</span>
-                            <pre dangerouslySetInnerHTML={{ __html: newsDetails.description }} className="news-details__description"></pre>
+                            <span className='news-details__description'>{newsDetails.title}</span>
+                            {/* <span className="news-details__title">{newsDetails.title} {newsDetails.subTitle}</span> */}
+                            <span dangerouslySetInnerHTML={{ __html: newsDetails.description }} className="news-details__description"></span>
+                            <span dangerouslySetInnerHTML={{ __html: newsDetails.additionalDescription }} className="news-details__description"></span>
                             {
                                 images ?
-                                    <Carousel autoPlay='true' dynamicHeight="true">
+                                    // <Carousel autoPlay='true' dynamicHeight="true">
+                                    <div>
                                         {
                                             images.map(elem => (
                                                 <div key={elem}>
-                                                    <img src={elem} />
+                                                    <img src={elem} className="news_detail_foto"/>
                                                 </div>
                                             ))
                                         }
-                                    </Carousel>
+                                    </div>
+                                    // </Carousel>
                                     : ''
                             }
-                            <span className="news-details__title">{newsDetails.subTitle}</span>
-                            <pre dangerouslySetInnerHTML={{ __html: newsDetails.additionalDescription }} className="news-details__description"></pre>
+                            {/* <span className="news-details__title">{newsDetails.subTitle}</span> */}
+                            {/* <pre dangerouslySetInnerHTML={{ __html: newsDetails.additionalDescription }} className="news-details__description"></pre> */}
                             {
                                 videos &&
                                 videos.map(video => (

@@ -36,7 +36,7 @@ const Footer = () => {
                         <span className="footer__menu__title">МЫ В СОЦСЕТЯХ</span>
                         <a target="_blank" href="https://www.facebook.com/profile.php?id=100047992961210"><span className="footer__menu__link"><FacebookIcon /> facebook</span></a>
                         <a target="_blank" href="https://www.instagram.com/of_technoland/"><span className="footer__menu__link"><InstagramIcon /> instagram</span></a>
-                        <a target="_blank"><span className="footer__menu__link"><YouTubeIcon /> youtube</span></a>
+                        <a target="_blank" href="https://studio.youtube.com/channel/UCZBtXh9Dq4CFdTTj5lM8bJA/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"><span className="footer__menu__link"><YouTubeIcon /> YouTube</span></a>
                     </div>
                 </div>
                 <div className="footer__horizontal-line"></div>
