@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.752ca4d1.css",
-    "main.js": "/static/js/main.158a5b9c.js",
+    "main.css": "/static/css/main.ce3052d4.css",
+    "main.js": "/static/js/main.9f214e91.js",
     "static/media/deaf.mp4": "/static/media/deaf.54e1e781e827e5d6d9ea.mp4",
     "static/media/videokrena.mp4": "/static/media/videokrena.4e18f4a2bdb97c2849a9.mp4",
     "static/media/gif1tetr.gif": "/static/media/gif1tetr.8d185f74eafdf49d2360.gif",
@@ -49,7 +49,7 @@
     "static/media/bb.jpg": "/static/media/bb.675b1c177f822e6f15b2.jpg",
     "static/media/photokrena3.jpeg": "/static/media/photokrena3.ac073945430ad17bd73e.jpeg",
     "static/media/Screenshot_1-300x224.png": "/static/media/Screenshot_1-300x224.0110cf79b2a4a120308e.png",
-    "static/media/about.jpg": "/static/media/about.b2a35a3ec2dfa56f209d.jpg",
+    "static/media/about.jpg": "/static/media/about.18573733ecbfc07a24c2.jpg",
     "static/media/sdo.jpg": "/static/media/sdo.55f83a90b66cd7b2397e.jpg",
     "static/media/isee5-1.jpg": "/static/media/isee5-1.4ae3502123232223896a.jpg",
     "static/media/unicef.png": "/static/media/unicef.2f483c087f01f08e82fe.png",
@@ -61,11 +61,11 @@
     "static/media/titul_buk_1-198x300.jpeg": "/static/media/titul_buk_1-198x300.648638039367895ffd04.jpeg",
     "static/media/azbuka1-1.jpg": "/static/media/azbuka1-1.9a98774b100ae6eb1e2d.jpg",
     "index.html": "/index.html",
-    "main.752ca4d1.css.map": "/static/css/main.752ca4d1.css.map",
-    "main.158a5b9c.js.map": "/static/js/main.158a5b9c.js.map"
+    "main.ce3052d4.css.map": "/static/css/main.ce3052d4.css.map",
+    "main.9f214e91.js.map": "/static/js/main.9f214e91.js.map"
   },
   "entrypoints": [
-    "static/css/main.752ca4d1.css",
-    "static/js/main.158a5b9c.js"
+    "static/css/main.ce3052d4.css",
+    "static/js/main.9f214e91.js"
   ]
 }
