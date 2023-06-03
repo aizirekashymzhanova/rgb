@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ce3052d4.css",
-    "main.js": "/static/js/main.9f214e91.js",
+    "main.js": "/static/js/main.9d8af53e.js",
     "static/media/deaf.mp4": "/static/media/deaf.54e1e781e827e5d6d9ea.mp4",
     "static/media/videokrena.mp4": "/static/media/videokrena.4e18f4a2bdb97c2849a9.mp4",
     "static/media/gif1tetr.gif": "/static/media/gif1tetr.8d185f74eafdf49d2360.gif",
@@ -62,10 +62,10 @@
     "static/media/azbuka1-1.jpg": "/static/media/azbuka1-1.9a98774b100ae6eb1e2d.jpg",
     "index.html": "/index.html",
     "main.ce3052d4.css.map": "/static/css/main.ce3052d4.css.map",
-    "main.9f214e91.js.map": "/static/js/main.9f214e91.js.map"
+    "main.9d8af53e.js.map": "/static/js/main.9d8af53e.js.map"
   },
   "entrypoints": [
     "static/css/main.ce3052d4.css",
-    "static/js/main.9f214e91.js"
+    "static/js/main.9d8af53e.js"
   ]
 }

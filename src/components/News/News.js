@@ -48,18 +48,32 @@ const News = () => {
         {news ? (
           <>
      
-           {news.news
-            .sort((a, b) => (b.news_id) - (a.news_id))
-            .map((elem) => (
-              <NewsCard
-                key={elem.news_id}
-                image={elem.bgImage}
-                id={elem.news_id}
-                title={elem.title}
-                description={elem.description.slice(0, 300) + "..."}
-                date={elem.date}
-              />
-            ))} 
+     {news.news
+  .sort((a, b) => {
+    const dateA = new Date(
+      parseInt(a.date.split('/')[2]), // год
+      parseInt(a.date.split('/')[1]) - 1, // месяц (нумерация месяцев начинается с 0)
+      parseInt(a.date.split('/')[0]) // день
+    );
+    const dateB = new Date(
+      parseInt(b.date.split('/')[2]), // год
+      parseInt(b.date.split('/')[1]) - 1, // месяц (нумерация месяцев начинается с 0)
+      parseInt(b.date.split('/')[0]) // день
+    );
+
+    return dateB - dateA;
+  })
+  .map((elem) => (
+    <NewsCard
+      key={elem.news_id}
+      image={elem.bgImage}
+      id={elem.news_id}
+      title={elem.title}
+      description={elem.description.slice(0, 300) + "..."}
+      date={elem.date}
+    />
+  ))}
+
            <Pagination
               className={classes.pagination}
               page={+page}
