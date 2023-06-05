@@ -12,6 +12,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import axios from 'axios';
+
 
 const useStyles = makeStyles(theme => ({
   pagination: {
@@ -45,57 +47,26 @@ const useStyles = makeStyles(theme => ({
 
 const Materials = () => {
   const { isUserLogedIn } = useContext(authContext);
-  const { getMaterials, materials, totalPages } = useContext(materialsContext);
+  const { getMaterials, materials, totalPages, getMaterials_count, result } = useContext(materialsContext);
   const history = useHistory();
   const [page, setPage] = useState(getPage());
   const classes = useStyles();
 
   const [category, setCategory] = useState(getCategory());
 
-//   const [downloadCounts, setDownloadCounts] = useState(() => {
-//     const initialCounts = {};
-//     materials && materials.materials.forEach(elem => {
-//         const count = getDownloadCount(elem.material_id);
-//         initialCounts[elem.material_id] = count;
-//     });
-//     return initialCounts;
-//   });
-
-const [downloadCounts, setDownloadCounts] = useState({});
-
-  const incrementDownloadCount = (materialId) => {
-    const currentCount = localStorage.getItem(`downloadCount_${materialId}`);
-    const newCount = currentCount ? parseInt(currentCount) + 1 : 1;
-    localStorage.setItem(`downloadCount_${materialId}`, newCount);
-
-    setDownloadCounts(prevCounts => ({
-        ...prevCounts,
-        [materialId]: newCount
-    }));
-  };
-
-  const getDownloadCount = (materialId) => {
-    const count = localStorage.getItem(`downloadCount_${materialId}`);
-    return count ? parseInt(count) : 0;
-  };
-
   useEffect(() => {
     isUserLogedIn(history);
     getMaterials();
+    getMaterials_count();
+
+    // if (result && result.result) {
+    //   const counts = {};
+    //   result.result.forEach(item => {
+    //     counts[item.material_id] = item.count;
+    //   });
+    //   setDownloadCounts(counts);
+    // }
   }, []);
-
-
-  useEffect(() => {
-    if (materials && materials.materials) {
-      const counts = {};
-      materials.materials.forEach((elem) => {
-        const count = getDownloadCount(elem.material_id);
-        counts[elem.material_id] = count;
-      });
-      setDownloadCounts(counts);
-    }
-  }, [materials]);
-  
 
   function getCategory() {
     const search = new URLSearchParams(history.location.search);
@@ -125,12 +96,41 @@ const [downloadCounts, setDownloadCounts] = useState({});
     search.set("page", page);
     history.push(`${history.location.pathname}?${search.toString()}`);
     getMaterials();
+    getMaterials_count()
     setPage(page);
   }
 
-  const saveFile = (url, fileName) => {
+  const saveFile = (url, fileName, materialId) => {
     FileSaver.saveAs(url, fileName);
-  };
+
+ // Находим объект с соответствующим materialId в массиве result.result
+ const material = result.result.find(item => item.material_id === materialId);
+
+ if (material) {
+   // Получаем текущее значение количества скачиваний
+   const currentDownloadCount = material.count;
+ 
+   // Увеличение количества скачиваний на 1
+   const newDownloadCount = currentDownloadCount + 1;
+
+//   Отправка POST-запроса на сервер
+   axios
+     .post('https://lis.kg/coun_down_material_edit', {
+       materialId: materialId,
+       downloadCount: newDownloadCount,
+     })
+     .then(response => {
+       console.log('Запрос успешно отправлен');
+     })
+     .catch(error => {
+       console.error('Ошибка при отправке запроса:', error);
+     });
+ }
+
+
+ getMaterials_count()
+
+};
 
   const combinedClass = `${classes.inputLabel} ${classes.formControl}`;
 
@@ -178,10 +178,10 @@ const [downloadCounts, setDownloadCounts] = useState({});
                   <span className="download__item__name">{elem.material_name}</span>
                   <span className="download__item__description">{elem.material_description}</span>
                   <button onClick={() => {
-                    saveFile(elem.material_pathname, elem.material_title);
-                    incrementDownloadCount(elem.material_id);
+                    saveFile(elem.material_pathname, elem.material_title, elem.material_id);
+                   // incrementDownloadCount(elem.material_id);
                   }}>Скачать <GetAppIcon /></button>
-                  <span>Количество скачиваний: {downloadCounts[elem.material_id]}</span>
+                  <span>Количество скачиваний: {result && result.result ? result.result.find(item => item.material_id === elem.material_id)?.count : 0}</span>
                 </div>
               ))
               :
