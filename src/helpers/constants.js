@@ -15,4 +15,4 @@ export const REGISTER_NEW_USER = 'https://technoland-pf.kg/api/admin/register-ne
 export const DELETE_USER_API = 'https://technoland-pf.kg/api/admin/delete-GET_NEWS_API.php';
 export const RESET_PASSWORD_API = 'https://technoland-pf.kg/api/admin/reset-password.php';
 export const DELETE_MATERIAL_API = 'https://technoland-pf.kg/api/admin/delete-material.php';
-export const COUNT_MATERIAT_DOWN = 'https://lis.kg/coun_down_material'
+//export const COUNT_MATERIAT_DOWN = 'https://lis.kg/coun_down_material'

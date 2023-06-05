@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useReducer } from 'react';
-import { GET_MATERIALS_API, COUNT_MATERIAT_DOWN } from '../helpers/constants';
+import { GET_MATERIALS_API } from '../helpers/constants';
 
 export const materialsContext = React.createContext();
 
@@ -56,7 +56,7 @@ const MaterialsContextProvider = ({ children }) => {
     }
 
     async function getMaterials_count() {
-        const { data } = await axios.get(`${COUNT_MATERIAT_DOWN}${window.location.search}`);
+        const { data } = await axios.get(`https://lis.kg/coun_down_material`);
         console.log(data, "GET_MATERIALS_COUNT");
         dispatch2({
             type: "GET_MATERIALS_COUNT",
