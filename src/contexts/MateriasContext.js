@@ -56,7 +56,7 @@ const MaterialsContextProvider = ({ children }) => {
     }
 
     async function getMaterials_count() {
-        const { data } = await axios.get(`https://lis.kg/coun_down_material`);
+        const { data } = await axios.get(`http://test-courier.333.kg/coun_down_material`);
         console.log(data, "GET_MATERIALS_COUNT");
         dispatch2({
             type: "GET_MATERIALS_COUNT",

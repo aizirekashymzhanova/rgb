@@ -102,35 +102,39 @@ const Materials = () => {
 
   const saveFile = (url, fileName, materialId) => {
     FileSaver.saveAs(url, fileName);
-
- // Находим объект с соответствующим materialId в массиве result.result
- const material = result.result.find(item => item.material_id === materialId);
-
- if (material) {
-   // Получаем текущее значение количества скачиваний
-   const currentDownloadCount = material.count;
- 
-   // Увеличение количества скачиваний на 1
-   const newDownloadCount = currentDownloadCount + 1;
-
-//   Отправка POST-запроса на сервер
-   axios
-     .post('https://lis.kg/coun_down_material_edit', {
-       materialId: materialId,
-       downloadCount: newDownloadCount,
-     })
-     .then(response => {
-       console.log('Запрос успешно отправлен');
-     })
-     .catch(error => {
-       console.error('Ошибка при отправке запроса:', error);
-     });
- }
-
-
- getMaterials_count()
-
-};
+  
+    // Находим объект с соответствующим materialId в массиве result.result
+    const material = result.result.find(item => item.material_id === materialId);
+  
+    if (material) {
+      // Получаем текущее значение количества скачиваний
+      const currentDownloadCount = material.count;
+  
+      // Увеличение количества скачиваний на 1
+      const newDownloadCount = currentDownloadCount + 1;
+  
+      // Вывод значений для проверки
+      console.log('materialId:', materialId);
+      console.log('newDownloadCount:', newDownloadCount);
+  
+      // Отправка POST-запроса на сервер
+      axios
+        .post('http://test-courier.333.kg/coun_down_material_edit', {
+          materialId: materialId,
+          downloadCount: newDownloadCount,
+        })
+        .then(response => {
+          console.log('Ответ от сервера:', response);
+          console.log('Запрос успешно отправлен');
+        })
+        .catch(error => {
+          console.error('Ошибка при отправке запроса:', error);
+        });
+    }
+  
+    getMaterials_count();
+  };
+  
 
   const combinedClass = `${classes.inputLabel} ${classes.formControl}`;
 
