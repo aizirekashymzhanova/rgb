@@ -119,7 +119,7 @@ const Materials = () => {
   
       // Отправка POST-запроса на сервер
       axios
-        .post('http://test-courier.333.kg/coun_down_material_edit', {
+        .post('https://lis.kg/coun_down_material_edit', {
           materialId: materialId,
           downloadCount: newDownloadCount,
         })
