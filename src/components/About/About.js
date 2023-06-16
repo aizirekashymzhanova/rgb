@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from "react";
 import NavBar from '../NavBar/NavBar';
 import './About.css'
-import aa from '../../assets/images/aa.jpg';
-import bb from '../../assets/images/bb.jpg';
-import about from '../../assets/images/about.jpg';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const About = () => {
+
+    const { language } = useContext(LanguageContext);
+
     return (
         <>
             <NavBar />
-            <div className="about__container">
+            
+            {language === 'ru' ? <div className="about__container">
                 <span className="about-us__title">ОБЩЕСТВЕННЫЙ ФОНД ТЕХНОЛЭНД</span>
 
                 <span className="about-us__title">Общие сведения</span>
@@ -32,22 +35,33 @@ const About = () => {
 
                 <span className="about__info">Развивать безграничный потенциал общества, помогая молодежи в поисках форм самореализации и поддерживая общественно значимые социальные проекты</span>
 
-                {/* <span className="about-us__title">Проект фонда</span>
+            </div> : <div className="about__container">
+                <span className="about-us__title">PUBLIC FOUNDATION TECHNOLAND</span>
 
-                <span className="about__info"><span>Проект "Рельефные  алфавиты Брайля для незрячих детей", разработанный ОФ "Технолэнд, FabLab Bishkek и SIFO (Сеульская международная организация Дружбы) занял первое место на конкурсу научно-исследовательских работ в КГТУ им. И.Раззакова. <a className='podrobnee' href='https://www.youtube.com/watch?v=oISf5jOUV2U'>Подробнее</a></span></span>
+                <span className="about-us__title">General information</span>
 
-                <span className="about-us__title user_info">Специальная общеобразовательная школа-интернат для слепых и слабовидящих детей.</span>
+                <span className="about__info"><span>Technoland Public Foundation (hereinafter referred to as the "Foundation") was established in accordance with the Constitution of the Kyrgyz Republic, the Civil Code of the Kyrgyz Republic, 
+                    Law of the Kyrgyz Republic "On Non-Profit Organizations" and other normative legal acts of the Kyrgyz Republic. <a href='https://www.osoo.kg/inn/02112201510296/'>
+                        (https://www.osoo.kg/inn/02112201510296/)</a></span></span>
 
-                <img className="info__logo_user" src={about} alt="" />
+                <span className="about__info">The Foundation is a non-profit organization. The Technoland Public Foundation was established by professors of the Telematics Department of KSTU named after I. Razzakov.   Telematics Department of KSTU named after I. Razzakov for the promotion of IT technologies among the population of the Kyrgyz Republic and participation in socially significant projects.</span>
 
-                <span className="about-us__title user_info">Наблюдательный совет: Медралиева Бубусара Ниясбековна</span>
+                <span className="about-us__title">Goals and objectives of the fund</span>
 
-                <img className="info__logo_user" src={bb} alt="" />
+                <span className="about__info">– Promoting the development of ICT capacity to achieve the Sustainable Development Goals;</span>
 
-                <span className="about-us__title user_info">Координатор проектов: Турдалиева Айзат Аманбековна</span>
+                <span className="about__info">– Promoting the accessibility and use of ICT for the socio-economic development of individuals, taking into account their special needs in all spheres of activity;</span>
 
-                <img className="info__logo_user" src={aa} alt="" /> */}
-            </div>
+                <span className="about__info">– Promoting ICT technologies that improve the quality of life of socially vulnerable populations through responsive policies, programs, and services;</span>
+
+                <span className="about__info">– Increasing the knowledge of the population in the field of ICT;</span>
+
+                <span className="about-us__title">Foundation mission</span>
+
+                <span className="about__info">To develop the boundless potential of society by helping young people to find forms of self-realization and supporting socially significant social projects</span>
+
+            </div>}
+
         </>
     );
 };

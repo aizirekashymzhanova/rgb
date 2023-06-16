@@ -18,6 +18,8 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import { makeStyles } from "@material-ui/core/styles";
 import DoneIcon from "@material-ui/icons/Done";
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -40,6 +42,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const RegisterUser = () => {
+  const { language } = useContext(LanguageContext);
+  
   const { isAdminLogedIn } = useContext(adminAuthContext);
   const {
     users,
@@ -107,7 +111,7 @@ const RegisterUser = () => {
 
   return (
     <>
-      <div className="news__container">
+    {language === 'ru' ?       <div className="news__container">
         <span className="news__title">Зарегистрироваться</span>
 
         <form
@@ -160,6 +164,60 @@ const RegisterUser = () => {
           </button>
         </form>
       </div>
+ :       <div className="news__container">
+ <span className="news__title">Sign up</span>
+
+ <form
+   onSubmit={(event) => event.preventDefault()}
+   className="add-user__form"
+ >
+   <label className="add-user__form__title">
+   Fill out the following fields
+   </label>
+
+   <label className="add-user__form__label">First name, last name *</label>
+   <input
+     name="name"
+     onChange={handleInpChanges}
+     value={inpData.name}
+     className="add-user__form__input"
+     type="text"
+     placeholder="First name, last name"
+   />
+
+   <label className="add-user__form__label">E-MAIL *</label>
+   <input
+     name="email"
+     onChange={handleInpChanges}
+     value={inpData.email}
+     className="add-user__form__input"
+     type="text"
+     placeholder="E-mail address"
+   />
+
+   <label className="add-user__form__label">Password *</label>
+   <input
+     name="password"
+     onChange={handleInpChanges}
+     value={inpData.password}
+     className="add-user__form__input"
+     type="text"
+     placeholder="Password"
+   />
+
+   <span
+     className="add-user__form__error"
+     style={{ color: registeringInfo.success ? "#003366" : "red" }}
+   >
+     {registeringInfo.message}
+   </span>
+
+   <button onClick={handleSubmitBtn} type="submit">
+   SIGN UP
+   </button>
+ </form>
+</div>}
+
     </>
   );
 };

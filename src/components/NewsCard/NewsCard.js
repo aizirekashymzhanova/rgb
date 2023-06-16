@@ -11,6 +11,8 @@ import BookmarkIcon from "@material-ui/icons/Bookmark";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 import { Link } from "react-router-dom";
 import { newsContext } from "../../contexts/NewsContext";
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 const useStyles = makeStyles({
   root: {
@@ -38,6 +40,7 @@ const useStyles = makeStyles({
 });
 
 export default function NewsCard(props) {
+  const { language } = useContext(LanguageContext);
   const classes = useStyles();
   const { addToFavourites, checkNewsInFavourites } = useContext(newsContext);
 
@@ -67,9 +70,11 @@ export default function NewsCard(props) {
       <CardActions style={{ justifyContent: "space-between" }}>
         <div>
           <Link to={`/news-details/${props.id}`}>
-            <Button size="small" style={{ color: "orange" }}>
+          {language === 'ru' ? <Button size="small" style={{ color: "orange" }}>
               Читать подробнее
-            </Button>
+            </Button> : <Button size="small" style={{ color: "orange" }}>
+            Read more
+            </Button>}
           </Link>
           <Button
             onClick={() =>

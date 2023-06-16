@@ -1,5 +1,7 @@
 import AdminAuthContextProvider from "./contexts/AdminAuthContext";
 import Routes from "./Routes";
+import { LanguageProvider } from './contexts/LanguageContext';
+
 
 function App() {
 
@@ -7,9 +9,11 @@ function App() {
 
   return (
     <div className="App">
-      <AdminAuthContextProvider>
-        <Routes />
-      </AdminAuthContextProvider>
+       <LanguageProvider>
+          <AdminAuthContextProvider>
+            <Routes />
+          </AdminAuthContextProvider>
+       </LanguageProvider>
     </div>
   );
 }

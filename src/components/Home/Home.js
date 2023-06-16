@@ -19,40 +19,57 @@ import dakt from "../../assets/images/dakt.jpeg";
 import ris from "../../assets/images/ris.jpeg";
 import ris2 from "../../assets/images/tmrs.png";
 import News from "../News/News";
-//
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { LanguageContext } from '../../contexts/LanguageContext';
+
 
 const Home = () => {
+
+  const { language } = useContext(LanguageContext);
+
   return (
     <>
       <StickyNavBar />
       <Header />
       <div className="our-jobs">
         <div className="our-jobs__container">
-          <h1 className="our-jobs__container__title">Наши разработки</h1>
-          <h2 className="our-jobs__container__desciption">
-            Большая часть наших работ направлена на продвижение ИКТ технологий,
+        {language === 'ru' ? <h1 className="our-jobs__container__title">Наши разработки</h1> : <h1 className="our-jobs__container__title">Our developments</h1>}
+        {language === 'ru' ? <h2 className="our-jobs__container__desciption">Большая часть наших работ направлена на продвижение ИКТ технологий,
             повышающих качество жизни социально уязвимых слоев населения путем
-            внедрения отзывчивых политик, программ и услуг
-          </h2>
+            внедрения отзывчивых политик, программ и услуг</h2> : <h2 className="our-jobs__container__desciption">Most of our work is aimed at promoting ICT technologies, that improve the quality of life for vulnerable populations by introducing responsive policies, programs, and services</h2>}
+
           <div className="our-jobs__cards">
             <div
               className="our-jobs__card"
               style={{ backgroundImage: `url(${mediaPrimer})` }}
             >
-              <span className="our-jobs__card__title">
+              {language === 'ru' ? <span className="our-jobs__card__title">
                 Медиа-букварь <br /> дошколёнка
-              </span>
-              <span className="our-jobs__card__description">
+              </span> : <span className="our-jobs__card__title">
+                Mediabook <br /> Preschooler
+              </span>}
+
+              {language === 'ru' ? <span className="our-jobs__card__description">
                 Букварь для детей <br /> с нарушением слуха
-              </span>
+              </span> : <span className="our-jobs__card__description">
+              Primer for Children <br /> hearing-impaired
+              </span>}
+              
               <div className="our-jobs__card__hover">
-                <a
+              {language === 'ru' ? <a
                   href="https://technoland-inno4kg.kg"
                   className="our-jobs__card__more-btn"
                   target="blank"
                 >
                   Перейти
-                </a>
+                </a> : <a
+                  href="https://technoland-inno4kg.kg"
+                  className="our-jobs__card__more-btn"
+                  target="blank"
+                >
+                  Go to
+                </a>}
+                
               </div>
             </div>
 
@@ -60,12 +77,19 @@ const Home = () => {
               className="our-jobs__card"
               style={{ backgroundImage: `url(${signLangAr})` }}
             >
-              <span className="our-jobs__card__title">
+              {language === 'ru' ? <span className="our-jobs__card__title">
                 Язык жестов: Арифметика
-              </span>
-              <span className="our-jobs__card__description">
+              </span> : <span className="our-jobs__card__title">
+              Sign Language: Arithmetic
+              </span>}
+
+              {language === 'ru' ? <span className="our-jobs__card__description">
                 Обучающее мобильное приложение по арифметике
-              </span>
+              </span> : <span className="our-jobs__card__description">
+              An educational mobile app for arithmetic
+              </span>}
+              
+              
               <div className="our-jobs__card__hover">
                 <a
                   target="_blank"
@@ -76,7 +100,7 @@ const Home = () => {
                     <img src={Appstore} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                  {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>App Store</span>
                   </div>
                 </a>
@@ -90,7 +114,7 @@ const Home = () => {
                     <img src={GooglePlay} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                  {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>Google Play</span>
                   </div>
                 </a>
@@ -102,12 +126,20 @@ const Home = () => {
               className="our-jobs__card"
               style={{ backgroundImage: `url(${signLangWorld})` }}
             >
-              <span className="our-jobs__card__title">
+              {language === 'ru' ? <span className="our-jobs__card__title">
                 Язык жестов: Мой мир
-              </span>
-              <span className="our-jobs__card__description">
+              </span> : <span className="our-jobs__card__title">
+              Sign Language: My World
+              </span>}
+
+              {language === 'ru' ? <span className="our-jobs__card__title">
+                <span className="our-jobs__card__description">
                 Обучающее мобильное приложение для слабослышащих детей.
               </span>
+              </span> : <span className="our-jobs__card__description">
+              An educational mobile app for hearing-impaired children.
+              </span>}
+
               <div className="our-jobs__card__hover">
                 <a
                   target="_blank"
@@ -118,7 +150,7 @@ const Home = () => {
                     <img src={Appstore} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                    {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>App Store</span>
                   </div>
                 </a>
@@ -132,7 +164,7 @@ const Home = () => {
                     <img src={GooglePlay} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                    {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>Google Play</span>
                   </div>
                 </a>
@@ -143,12 +175,18 @@ const Home = () => {
               className="our-jobs__card"
               style={{ backgroundImage: `url(${signLangFam})` }}
             >
-              <span className="our-jobs__card__title">
+              {language === 'ru' ? <span className="our-jobs__card__title">
                 Язык жестов: Моя семья
-              </span>
-              <span className="our-jobs__card__description">
+              </span> : <span className="our-jobs__card__title">
+              Sign Language: My Family
+              </span>}
+
+              {language === 'ru' ? <span className="our-jobs__card__description">
                 Обучающее мобильное приложение для слабослышащих детей.
-              </span>
+              </span> : <span className="our-jobs__card__description">
+              An educational mobile app for hearing-impaired children.
+              </span>}
+              
               <div className="our-jobs__card__hover">
                 <a
                   target="_blank"
@@ -159,7 +197,7 @@ const Home = () => {
                     <img src={Appstore} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                  {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>App Store</span>
                   </div>
                 </a>
@@ -173,7 +211,7 @@ const Home = () => {
                     <img src={GooglePlay} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                  {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>Google Play</span>
                   </div>
                 </a>
@@ -184,10 +222,13 @@ const Home = () => {
               className="our-jobs__card"
               style={{ backgroundImage: `url(${signLangDilgirim})` }}
             >
-              <span className="our-jobs__card__title">Дилгирим</span>
-              <span className="our-jobs__card__description">
+              {language === 'ru' ? <span className="our-jobs__card__title">Дилгирим</span> : <span className="our-jobs__card__title">Dilgirim</span>}
+              {language === 'ru' ? <span className="our-jobs__card__description">
                 Двуязычное мобильное приложение для детей с нарушением слуха.
-              </span>
+              </span> : <span className="our-jobs__card__description">
+              A bilingual mobile app for hearing-impaired children.
+              </span>}
+
               <div className="our-jobs__card__hover">
                 <a
                   target="_blank"
@@ -198,7 +239,7 @@ const Home = () => {
                     <img src={Appstore} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                  {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>App Store</span>
                   </div>
                 </a>
@@ -212,7 +253,7 @@ const Home = () => {
                     <img src={GooglePlay} alt="appstore" />
                   </div>
                   <div className="store-btn__text">
-                    <span>Доступно в</span>
+                  {language === 'ru' ? <span>Доступно в</span> : <span>Available in</span>}
                     <span>Google Play</span>
                   </div>
                 </a>
@@ -223,12 +264,14 @@ const Home = () => {
               className="our-jobs__card"
               style={{ backgroundImage: `url(${dakt})` }}
             >
-              <span className="our-jobs__card__title">Дактильная азбука</span>
+              {language === 'ru' ? <span className="our-jobs__card__title">Дактильная азбука</span> :  <span className="our-jobs__card__title">Dactyl Alphabet</span>}
+             
               <span className="our-jobs__card__description"></span>
               <div className="our-jobs__card__hover">
                 <Link to="/miha" className="our-jobs__card__store-btn">
                   <div>
-                    <span>Перейти</span>
+                  {language === 'ru' ? <span>Перейти</span> : <span>Go to</span>}
+                    
                   </div>
                 </Link>
               </div>
@@ -238,12 +281,13 @@ const Home = () => {
               className="our-jobs__card"
               style={{ backgroundImage: `url(${ris})` }}
             >
-              <span className="our-jobs__card__title">Прописные тетради</span>
+              {language === 'ru' ? <span className="our-jobs__card__title">Прописные тетради</span> :  <span className="our-jobs__card__title">Penmanship notebooks</span>}
+
               <span className="our-jobs__card__description"></span>
               <div className="our-jobs__card__hover">
                 <Link to="/miha2" className="our-jobs__card__store-btn">
                   <div>
-                    <span>Перейти</span>
+                  {language === 'ru' ? <span>Перейти</span> : <span>Go to</span>}
                   </div>
                 </Link>
               </div>
@@ -253,12 +297,14 @@ const Home = () => {
               className="our-jobs__card"
               style={{ backgroundImage: `url(${ris2})` }}
             >
-              <span className="our-jobs__card__title">Видеоуроки по Кыргызскому языку</span>
+               {language === 'ru' ? <span className="our-jobs__card__title">Видеоуроки по Кыргызскому языку</span> : <span className="our-jobs__card__title">Video lessons in the Kyrgyz language</span>}
+              
               <span className="our-jobs__card__description"></span>
               <div className="our-jobs__card__hover">
                 <div className="our-jobs__card__store-btn">
                   <div>
-                    <a href="https://www.youtube.com/watch?v=ZGsDYsFAmDg" className="pereiti">Перейти</a>
+                  {language === 'ru' ? <a href="https://www.youtube.com/watch?v=ZGsDYsFAmDg" className="pereiti">Перейти</a> : <a href="https://www.youtube.com/watch?v=ZGsDYsFAmDg" className="pereiti">Go to</a>}
+                    
                   </div>
                 </div>
               </div>
