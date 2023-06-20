@@ -37,6 +37,7 @@ const useStyles = makeStyles({
 });
 
 export default function NewsCard(props) {
+
   const { language } = useContext(LanguageContext);
   const classes = useStyles();
   const { addToFavourites, checkNewsInFavourites } = useContext(newsContext);
@@ -54,15 +55,15 @@ export default function NewsCard(props) {
 
   const translateDescription = (description) => {
     const translations = {
-      'Специальной общеобразовательной школе-интернат для слепых и слабовидящих детей , г. Бишкек переданы грифели для письма по Брайлю, а также рельефные русские, кыргызские и английские алфавиты Брайля, которые разработаны совместно с FabLab Bishkek и организацией SIFO (Сеульская международная организаци...': 'A special general education boarding school for blind and visually impaired children in Bishkek received Braille slates, as well as Russian, Kyrgyz and English Braille alphabets in relief, which were developed together with FabLab Bishkek and SIFO (Seoul International Friendship Organization)',
-      'С началом этого года для преодоления последствий пандемии ЮНИСЕФ и ПРООН в Кыргызской Республике оказали поддержку для разработки и запуску двуязычного мобильного приложения «Дилгир» для глухих и слабослышащих детей. Приложение является дополнением к учебнику “Дилгир-1”, над созданием которого рабо...': 'Since the beginning of this year, UNICEF and UNDP in the Kyrgyz Republic have provided support for the development and launch of a bilingual mobile application "Dilgir" for deaf and hard of hearing children to overcome the consequences of the pandemic. The application serves as a supplement to the "Dilgir-1" textbook, which is being developed by the methodological council of the Special General Education Boarding School for Deaf Children in collaboration with the Technoland Public Foundation. The textbook is being created...',
+      'Специальной общеобразовательной школе-интернат для слепых и слабовидящих детей , г. Бишкек переданы грифели для письма по Брайлю, а также рельефные русские, кыргызские и английские алфавиты Брайля, ко...': 'A special general education boarding school for blind and visually impaired children in Bishkek received Braille slates, as well as Russian, Kyrgyz and English Braille alphabets in relief, which were developed together with FabLab Bishkek and SIFO (Seoul International Friendship Organization)',
+      'С началом этого года для преодоления последствий пандемии ЮНИСЕФ и ПРООН в Кыргызской Республике оказали поддержку для разработки и запуску двуязычного мобильного приложения «Дилгир» для глухих и слаб...': 'Since the beginning of this year, UNICEF and UNDP in the Kyrgyz Republic have provided support for the development and launch of a bilingual mobile application "Dilgir" for deaf and hard of hearing children to overcome the consequences of the pandemic. The application serves as a supplement to the "Dilgir-1" textbook, which is being developed by the methodological council of the Special General Education Boarding School for Deaf Children in collaboration with the Technoland Public Foundation. The textbook is being created...',
       'Данные алфавиты изготовлены в лаборатории FabLab Bishkek, финансовые расходы на раздаточные материалы покрыты организацией SIFO (Сеульская международная организация дружбы)...': 'These alphabets were made in the FabLab Bishkek, the financial cost of the handouts was covered by SIFO (Seoul International Friendship Organization). Kubatbekov Kanat and Saadabaeva Kamila, 4th year student of "Telematics" direction, mentor - engineer of FabLab Bishkek Azisbek uulu Timur, took active part in development and production of materials.',
-      'В апреле этого года Программа Развития ООН в Кыргызстане объявил конкурс «Вызов Открытым Инновациям — Inno4Kg» для преодоления последствий пандемии. Победитель конкурса  - проект «Вовлечение детей с нарушением слуха к системам цифрового обучения», инициированный общественным фондом «Технолэнд» в тес... ' : 'In April of this year, the United Nations Development Program in Kyrgyzstan announced the "Open Innovation Challenge - Inno4Kg" competition to overcome the consequences of the pandemic. The winner of the contest is the project "Involvement of children with hearing impairment in digital learning systems", initiated by the public foundation "Technoland" in close cooperation with...',
+      'В апреле этого года Программа Развития ООН в Кыргызстане объявил конкурс «Вызов Открытым Инновациям — Inno4Kg» для преодоления последствий пандемии. Победитель конкурса  - проект «Вовлечение детей с н...' : 'In April of this year, the United Nations Development Program in Kyrgyzstan announced the "Open Innovation Challenge - Inno4Kg" competition to overcome the consequences of the pandemic. The winner of the contest is the project "Involvement of children with hearing impairment in digital learning systems", initiated by the public foundation "Technoland" in close cooperation with...',
     };
 
-    const sanitizedDescription = decodeURIComponent(description.trim().replace(/\s+/g, ' '));
+    // const sanitizedDescription = decodeURIComponent(description.trim().replace(/\s+/g, ' '));
 
-    return translations[sanitizedDescription] || description;
+    return translations[description] || description;
   };
   
   return (

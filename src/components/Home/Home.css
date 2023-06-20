@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.bnt_translate{
+  margin: 0 5px;
+}
+
 .pereiti{
   color: white;
 }

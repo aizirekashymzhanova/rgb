@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import "../Home/Home.css";
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useContext(LanguageContext);
@@ -10,7 +11,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div>
-      <button onClick={() => handleLanguageChange('ru')}>Русский</button>
+      <button className='bnt_translate' onClick={() => handleLanguageChange('ru')}>Русский</button>
       <button onClick={() => handleLanguageChange('en')}>English</button>
     </div>
   );

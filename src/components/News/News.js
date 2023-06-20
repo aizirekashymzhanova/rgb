@@ -3,11 +3,10 @@ import "./News.css";
 import NavBar from "../NavBar/NavBar";
 import NewsCard from "../NewsCard/NewsCard";
 import { newsContext } from "../../contexts/NewsContext";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress, makeStyles } from "@material-ui/core";
 //import { CircularProgress, makeStyles } from "@material-ui/core";
 //import Pagination from "@material-ui/lab/Pagination";
 import { useHistory } from "react-router";
-import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import { LanguageContext } from '../../contexts/LanguageContext';
 
 // const useStyles = makeStyles((theme) => ({
@@ -18,7 +17,6 @@ import { LanguageContext } from '../../contexts/LanguageContext';
 
 const News = () => {
   const { language } = useContext(LanguageContext);
-
   const { getNews, news, totalPages } = useContext(newsContext);
   const history = useHistory();
   //const [page, setPage] = useState(getPage());
@@ -46,8 +44,11 @@ const News = () => {
       {/* <NavBar /> */}
   
       <div className="news__container">
-      {language === 'ru' ? <span className="news__title">НОВОСТИ</span> : <span className="news__title">NEWS</span>}
-        
+      {language === 'ru' ? (
+         <span className="news__title">НОВОСТИ</span>
+      ) : (
+        <span className="news__title">NEWS</span>
+      )}
         {news && news.news ? (
           <>
             {news.news
@@ -71,7 +72,7 @@ const News = () => {
                   image={elem.bgImage}
                   id={elem.news_id}
                   title={elem.title}
-                  description={elem.description.slice(0, 300) + "..."}
+                  description={elem.description.slice(0, 200) + "..."}
                   date={elem.date}
                 />
               ))}
