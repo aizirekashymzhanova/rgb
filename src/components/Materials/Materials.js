@@ -142,43 +142,12 @@ export default function Materials (props){
 
   const combinedClass = `${classes.inputLabel} ${classes.formControl}`;
 
-  // const translateTitle = (material_title) => {
-  //   const translations = {
-  //     'План изучения Node.JS': 'New equipment for Special Boarding School: Braille Relief Alphabets for blind children',
-  //     'Пишем калькулятор на JS' : 'Overcoming the Consequences of the Pandemic with UNICEF and UNDP in the Kyrgyz Republic',
-  //     'Светодиоды и фоторезистор (Arduino)': 'These alphabets were produced by FabLab Bishkek, and the financial cost of the handouts was covered by SIFO (Seoul International Friendship Organization)',
-  //     'Код спутников GPS': "Technoland PF's project 'Engaging Hearing Impaired Children in Digital Learning Systems' is the winner of the UNDP Challenge to Open Innovation Inno4Kg program to overcome the effects of the pandemic.",
-  //     'Технологии PDH и SDH': "Technoland PF's project 'Engaging Hearing Impaired Children in Digital Learning Systems' is the winner of the UNDP Challenge to Open Innovation Inno4Kg program to overcome the effects of the pandemic.",
-  //     'Дискретизация и квантование сигналов': "Technoland PF's project 'Engaging Hearing Impaired Children in Digital Learning Systems' is the winner of the UNDP Challenge to Open Innovation Inno4Kg program to overcome the effects of the pandemic.",
-  //     'Построение РЛСС': "Technoland PF's project 'Engaging Hearing Impaired Children in Digital Learning Systems' is the winner of the UNDP Challenge to Open Innovation Inno4Kg program to overcome the effects of the pandemic.",
-  //     'Код спутников GPS': "Technoland PF's project 'Engaging Hearing Impaired Children in Digital Learning Systems' is the winner of the UNDP Challenge to Open Innovation Inno4Kg program to overcome the effects of the pandemic.",
-  //   };
-
-  //   return translations[material_title] || material_title;
-  // };
-
-  // const translateDescription = (material_description) => {
-  //   const translations = {
-  //     'Специальной общеобразовательной школе-интернат для слепых и слабовидящих детей , г. Бишкек переданы грифели для письма по Брайлю, а также рельефные русские, кыргызские и английские алфавиты Брайля, которые разработаны совместно с FabLab Bishkek и организацией SIFO (Сеульская международная организация Дружбы)': 'A special general education boarding school for blind and visually impaired children in Bishkek received Braille slates, as well as Russian, Kyrgyz and English Braille alphabets in relief, which were developed together with FabLab Bishkek and SIFO (Seoul International Friendship Organization)',
-  //     'С началом этого года для преодоления последствий пандемии ЮНИСЕФ и ПРООН в Кыргызской Республике оказали поддержку для разработки и запуску двуязычного мобильного приложения «Дилгир» для глухих и слабослышащих детей. Приложение является дополнением к учебнику “Дилгир-1”, над созданием которого работает методический совет Специальной общеобразовательной школы-интернат для глухих детей, совместно с общественным фондом «Технолэнд». Учебник представлен одновременно на русском и кыргызском языках, позволяющий внедрить единую методику обучения на обоих языках.': 'Since the beginning of this year to overcome the consequences of the pandemic, UNICEF and UNDP in the Kyrgyz Republic have supported the development and launch of a bilingual mobile application "Dilgir" for deaf and hard of hearing children. The app is a supplement to the Dilgir-1 textbook, which is being developed by the methodological council of the Special General Education Boarding School for Deaf Children, together with the Technoland Public Foundation. The textbook is presented simultaneously in Russian and Kyrgyz, allowing the introduction of a unified teaching methodology in both languages.',
-  //     'Данные алфавиты изготовлены в лаборатории FabLab Bishkek, финансовые расходы на раздаточные материалы покрыты организацией SIFO (Сеульская международная организация дружбы)' : 'These alphabets were made in the FabLab Bishkek, the financial cost of the handouts was covered by SIFO (Seoul International Friendship Organization). Kubatbekov Kanat and Saadabaeva Kamila, 4th year student of "Telematics" direction, mentor - engineer of FabLab Bishkek Azisbek uulu Timur, took active part in development and production of materials.',
-  //     'В апреле этого года Программа Развития ООН в Кыргызстане объявил конкурс «Вызов Открытым Инновациям — Inno4Kg» для преодоления последствий пандемии. Победитель конкурса  - проект «Вовлечение детей с нарушением слуха к системам цифрового обучения», инициированный общественным фондом «Технолэнд» в тесном сотрудничестве с СДОО №87 для детей с нарушением речи и слуха и Специальной общеобразовательной школой-интернат для глухих детей г.Бишкек.' : 'In April of this year, the United Nations Development Program in Kyrgyzstan announced the "Open Innovation Challenge - Inno4Kg" competition to overcome the consequences of the pandemic. The winner of the contest is the project "Involvement of children with hearing impairment in digital learning systems", initiated by the public foundation "Technoland" in close cooperation with...',
-  //   };
-
-
-  //   const sanitizedDescription = decodeURIComponent(material_description.trim().replace(/\s+/g, ' '));
-
-  //   return translations[sanitizedDescription] || material_description;
-  // };
-
-  const translations = {
-    // Русский -> Английский
-    ru: {
-      'Заголовок 1': 'Title 1',
-      'Заголовок 2': 'Title 2',
-      // Другие переводы...
-    }
-  };
+   const category_en = [
+    {elem: 'Для студентов', elem_en: 'For students'},
+    {elem: 'Arduino', elem_en: 'Arduino'},
+    {elem: 'ГСН', elem_en: 'GSN'},
+    {elem: 'ТЦС', elem_en: 'TCS'}
+   ]
 
   return (
     <>
@@ -222,7 +191,13 @@ export default function Materials (props){
             {
               materials && materials.categories ?
                 materials.categories.map(elem => (
-                  <MenuItem key={elem} value={elem}>{elem}</MenuItem>
+                  <MenuItem key={elem} value={elem}>
+                    {language === 'ru' ? (
+        <span >{elem}</span>
+      ) : (
+        <span >{category_en.find(item => item.elem === elem)?.elem_en}</span>
+      )}            
+                  </MenuItem>
                 ))
                 :
                 <MenuItem value="all">
@@ -242,10 +217,27 @@ export default function Materials (props){
             materials ?
               materials.materials.map(elem => (
                 <div key={elem.material_pathname} className="download__item">
-                  <span className="download__item__title">{elem.material_title}</span>
+                  <span className="download__item__title">
+                  {language === 'ru' ? (
+        <span >{elem.material_title}</span>
+      ) : (
+        <span >{result.result.find(item => item.material_id === elem.material_id)?.title}</span>
+      )}</span>
                   <img className="download__item__image" src={elem.material_image} alt="" />
-                  <span className="download__item__name">{elem.material_name}</span>
-                  <span className="download__item__description">{elem.material_description}</span>
+                  <span className="download__item__name">
+                  {language === 'ru' ? (
+        <span >{elem.material_name}</span>
+      ) : (
+        <span >{result.result.find(item => item.material_id === elem.material_id)?.material_name}</span>
+      )}
+                    
+                    </span>
+                  <span className="download__item__description">
+                  {language === 'ru' ? (
+        <span >{elem.material_description}</span>
+      ) : (
+        <span >{result.result.find(item => item.material_id === elem.material_id)?.description}</span>
+      )}</span>
                   <button onClick={() => {
                     saveFile(elem.material_pathname, elem.material_title, elem.material_id);
                    // incrementDownloadCount(elem.material_id);
